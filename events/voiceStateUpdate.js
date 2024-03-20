@@ -17,10 +17,50 @@ return queue?.stop(oldState.guild.id)
 }
 }
 }
-}, client?.config?.opt?.voiceConfig?.leaveOnEmpty?.cooldown || 60000)
+}, client?.config?.opt?.voiceConfig?.leaveOnEmpty?.cooldown || 100)
 }
 
 if(newState.id === client.user.id){
+
+
+
+
+
+
+
+
+
+  const leaveCommand = require('../commands/leave.js');
+
+  module.exports = async (client, interaction) => {
+    try {
+      // Your existing event handler code...
+      // ...
+
+      if (interaction.type === InteractionType.ApplicationCommand) {
+        // Handle the 'leave' command
+        if (interaction.commandName === leaveCommand.name) {
+          await leaveCommand.run(client, interaction);
+        }
+      }
+
+      // The rest of your existing code...
+      // ...
+
+    } catch (error) {
+      console.error(`Error processing interaction: ${error}`);
+    }
+  };
+
+
+
+
+
+
+
+
+  
+
 
 
 if(oldState.serverMute === false && newState.serverMute === true){
@@ -47,17 +87,7 @@ await queue.resume();
 }
 
 /*
-
-  ██████╗░████████╗██╗░░██╗           
-  ██╔══██╗╚══██╔══╝╚██╗██╔╝          
-  ██████╔╝░░░██║░░░░╚███╔╝░          
-  ██╔══██╗░░░██║░░░░██╔██╗░          
-  ██║░░██║░░░██║░░░██╔╝╚██╗          
-  ╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░╚═╝          
-
    
-   # MADE BY RTX!! FEEL FREE TO USE ANY PART OF CODE
+   # MADE BY FAKY!!
    ## FOR HELP CONTACT ME ON DISCORD
-   ## Contact    [ DISCORD SERVER :  https://discord.gg/FUEHs7RCqz ]
-   ## YT : https://www.youtube.com/channel/UCPbAvYWBgnYhliJa1BIrv0A
 */
