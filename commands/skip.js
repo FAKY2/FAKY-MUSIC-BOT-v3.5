@@ -61,7 +61,7 @@ try {
     .setColor('#3498db')
     .setAuthor({
       name: 'Song Skipped',
-      iconURL: 'https://cdn.discordapp.com/attachments/1156866389819281418/1157269773118357604/giphy.gif?ex=6517fef6&is=6516ad76&hm=f106480f7d017a07f75d543cf545bbea01e9cf53ebd42020bd3b90a14004398e&',
+      iconURL: 'https://a.top4top.io/p_3000ito0h1.gif',
       url: 'https://discord.gg/FUEHs7RCqz'
     })
     .setDescription(success ? ` **SKIPPED** : **${old.name}**` : '❌ Queue is empty!')
