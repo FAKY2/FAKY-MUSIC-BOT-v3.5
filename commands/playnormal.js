@@ -44,7 +44,7 @@ module.exports = {
       if (stp === "playlist") {
         let playlistw = interaction.options.getString('name')
         let playlist = await db?.playlist?.find().catch(e => { })
-        if (!playlist?.length > 0) return interaction.reply({ content: `There is no playlist. ❌`, ephemeral: true }).catch(e => { })
+        if (!playlist?.length > 0) return interaction.reply({ content: `❌`, ephemeral: true }).catch(e => { })
 
         let arr = 0
         for (let i = 0; i < playlist.length; i++) {
@@ -55,17 +55,14 @@ module.exports = {
 
             if (playlist_owner_filter !== interaction.member.id) {
               if (playlist_public_filter === false) {
-                return interaction.reply({ content: `You don't have permission to play this playlist. ❌`, ephemeral: true }).catch(e => { })
+                return interaction.reply({ content: `❌`, ephemeral: true }).catch(e => { })
               }
             }
 
             const music_filter = playlist[i]?.musics?.filter(m => m.playlist_name === playlistw)
-            if (!music_filter?.length > 0) return interaction.reply({ content: `No music with Name`, ephemeral: true }).catch(e => { })
-                const listembed = new EmbedBuilder()
-                .setTitle('Loading Your Album')
-                .setColor('#FF0000')
-                .setDescription('**🎸 Get ready for a musical journey!**');
-            interaction.reply({ content : '', embeds: [listembed] }).catch(e => { })
+            if (!music_filter?.length > 0) return interaction.reply({ content: `❌`, ephemeral: true }).catch(e => { })
+
+            interaction.reply({ content: `❌` }).catch(e => { })
 
             let songs = []
             music_filter.map(m => songs.push(m.music_url))
@@ -76,18 +73,8 @@ module.exports = {
                 properties: { name: playlistw, source: "custom" },
                 parallel: true
               });
-              const qembed = new EmbedBuilder()
-        .setAuthor({
-        name: 'Added Album Songs to Queue',
-        iconURL: 'https://cdn.discordapp.com/attachments/1156866389819281418/1157218651179597884/1213-verified.gif', 
-        url: 'https://discord.gg/FUEHs7RCqz'
-    })
-        .setColor('#14bdff')
-        .setFooter({ text: 'Use /queue for more Information' });
-           
-              await interaction.editReply({ content: '',embeds: [qembed] }).catch(e => {
-                  console.error('Error  reply:', e);
-                });
+
+              await interaction.editReply({ content: `❌`.replace("{interaction.member.id}", interaction.member.id).replace("{music_filter.length}", music_filter.length) }).catch(e => { })
 
               try {
                 await client.player.play(interaction.member.voice.channel, playl, {
@@ -125,7 +112,7 @@ module.exports = {
           } else {
             arr++
             if (arr === playlist.length) {
-              return interaction.reply({ content: `There is no Album ❌`, ephemeral: true }).catch(e => { })
+              return interaction.reply({ content: `❌`, ephemeral: true }).catch(e => { })
             }
           }
         }
@@ -138,6 +125,7 @@ module.exports = {
   }
 
   const embed = new EmbedBuilder()
+    .setColor('#3498db')
     .setColor('#FF0000')
     .setDescription('**🎸 Get ready for a musical journey!**');
 
@@ -151,6 +139,7 @@ module.exports = {
     });
   } catch (e) {
     const errorEmbed = new EmbedBuilder()
+      .setColor('#e74c3c')
       .setColor('#FF0000')
       .setDescription('❌ No results found!!');
 
@@ -158,8 +147,9 @@ module.exports = {
   }
 }
 
-    }  catch (e) {
-    console.error(e); 
-  }
+    } catch (e) {
+      const errorNotifer = require("../functions.js")
+      errorNotifer(client, interaction, e, pint)
+    }
   },
 };
