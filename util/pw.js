@@ -1,4 +1,4 @@
-const version = "@3.3.0";
+const version = "@3.8.0";
 const botName = "🟢FAKY's MUSIC BOT";
 
 function printWatermark() {
