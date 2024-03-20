@@ -1,7 +1,6 @@
 const { ApplicationCommandOptionType, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
 const db = require("../mongoDB");
 
-
 let selectedThumbnailURL;
 
 module.exports = {
@@ -17,7 +16,6 @@ module.exports = {
   voiceChannel: true,
   run: async (client, interaction) => {
     try {
-
       const name = interaction.options.getString('name')
       if (!name) return interaction.reply({ content: `❌ Enter a valid song name.`, ephemeral: true }).catch(e => { });
       let res;
@@ -35,7 +33,8 @@ module.exports = {
 
       const embed = new EmbedBuilder();
       embed.setColor(client.config.embedColor);
-      embed.setTitle(`Found: ${name}`);
+      embed.setTitle(`Found: ${name}`) // Removed the semicolon here
+           .setThumbnail('https://a.top4top.io/p_3000ito0h1.gif'); // Corrected the method to set the thumbnail
 
       const maxTracks = res.slice(0, 10);
 
