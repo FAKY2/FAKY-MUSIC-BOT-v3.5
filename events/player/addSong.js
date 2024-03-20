@@ -8,7 +8,8 @@ module.exports = async (client, queue, song) => {
       const embed = new EmbedBuilder()
         .setAuthor({
         name: 'Added To Queue',
-        iconURL: 'https://cdn.discordapp.com/attachments/1156866389819281418/1157218651179597884/1213-verified.gif?ex=6517cf5a&is=65167dda&hm=bc8fb4414cb412587ade0af285b77569d2568214cf7d6baab8702ddeb6c38ad5&', 
+        iconURL: 'https://d.top4top.io/p_3000mjl4k1.gif',
+        iconURL: 'https://d.top4top.io/p_3000mjl4k1.gif', 
         url: 'https://discord.gg/FUEHs7RCqz'
     })
         .setDescription(`<@${song.user.id}>, **${song.name}**`)
@@ -20,18 +21,10 @@ module.exports = async (client, queue, song) => {
 }
 
 
-/*
-
-  ██████╗░████████╗██╗░░██╗           
-  ██╔══██╗╚══██╔══╝╚██╗██╔╝          
-  ██████╔╝░░░██║░░░░╚███╔╝░          
-  ██╔══██╗░░░██║░░░░██╔██╗░          
-  ██║░░██║░░░██║░░░██╔╝╚██╗          
-  ╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░╚═╝          
+/*      
 
    
-   # MADE BY RTX!! FEEL FREE TO USE ANY PART OF CODE
+   # MADE BY FAKY!!
    ## FOR HELP CONTACT ME ON DISCORD
-   ## Contact    [ DISCORD SERVER :  https://discord.gg/FUEHs7RCqz ]
-   ## YT : https://www.youtube.com/channel/UCPbAvYWBgnYhliJa1BIrv0A
+   
 */
