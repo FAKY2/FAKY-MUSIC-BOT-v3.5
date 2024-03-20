@@ -34,7 +34,7 @@ module.exports = {
       const embed = new EmbedBuilder();
       embed.setColor(client.config.embedColor);
       embed.setTitle(`Found: ${name}`) // Removed the semicolon here
-           .setThumbnail('https://a.top4top.io/p_3000ito0h1.gif'); // Corrected the method to set the thumbnail
+
 
       const maxTracks = res.slice(0, 10);
 
