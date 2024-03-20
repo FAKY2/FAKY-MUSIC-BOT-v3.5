@@ -8,7 +8,7 @@ module.exports = async (client, queue, song) => {
       const embed = new EmbedBuilder()
         .setAuthor({
           name: 'Currently playing a Track',
-          iconURL: 'https://a.top4top.io/p_3000ito0h1.gif',
+          iconURL: 'https://d.top4top.io/p_3000mjl4k1.gif',
           url: 'https://discord.gg/FUEHs7RCqz'
         })
         .setDescription(`\n ‎ \n▶️ **Details :** **${song?.name}**\n▶️ **Enjoy the Ultimate Music Experience. ** \n▶️ **If link breaks playback try to give query.**`)
