@@ -1,17 +1,8 @@
 /*
 
-  ██████╗░████████╗██╗░░██╗           
-  ██╔══██╗╚══██╔══╝╚██╗██╔╝          
-  ██████╔╝░░░██║░░░░╚███╔╝░          
-  ██╔══██╗░░░██║░░░░██╔██╗░          
-  ██║░░██║░░░██║░░░██╔╝╚██╗          
-  ╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░╚═╝          
-
    
-   # MADE BY RTX!! FEEL FREE TO USE ANY PART OF CODE
+   # MADE BY FAKY!!
    ## FOR HELP CONTACT ME ON DISCORD
-   ## Contact    [ DISCORD SERVER :  https://discord.gg/FUEHs7RCqz ]
-   ## YT : https://www.youtube.com/channel/UCPbAvYWBgnYhliJa1BIrv0A
 */
 const config = require("../config.js");
 const { EmbedBuilder, InteractionType, ModalBuilder, TextInputBuilder, TextInputStyle, ActionRowBuilder } = require('discord.js');
@@ -19,6 +10,8 @@ const db = require("../mongoDB");
 const fs = require("fs")
 module.exports = async (client, interaction) => {
 
+
+  
 try {
 if (!interaction?.guild){
 return interaction?.reply({ content: "Rate Limited.", ephemeral: true })
@@ -90,7 +83,7 @@ return interaction?.reply({ content: "Rate Limited.", ephemeral: true })
             }
             }
             }
-            return props.run(client, interaction);
+               return props.run(client, interaction);
             
             } else {
             return interaction?.reply({ content: `▶️ Missing Permissions: **${props?.permissions?.replace("0x0000000000000020", "MANAGE GUILD")?.replace("0x0000000000000800", "SEND MESSAGES") || "SEND MESSAGES"}**`, ephemeral: true });
@@ -141,16 +134,7 @@ return interaction?.reply({ content: "Rate Limited.", ephemeral: true })
 
 /*
 
-  ██████╗░████████╗██╗░░██╗           
-  ██╔══██╗╚══██╔══╝╚██╗██╔╝          
-  ██████╔╝░░░██║░░░░╚███╔╝░          
-  ██╔══██╗░░░██║░░░░██╔██╗░          
-  ██║░░██║░░░██║░░░██╔╝╚██╗          
-  ╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░╚═╝          
-
    
-   # MADE BY RTX!! FEEL FREE TO USE ANY PART OF CODE
-   ## FOR HELP CONTACT ME ON DISCORD
-   ## Contact    [ DISCORD SERVER :  https://discord.gg/FUEHs7RCqz ]
-   ## YT : https://www.youtube.com/channel/UCPbAvYWBgnYhliJa1BIrv0A
+   # MADE BY FAKY!!
+
 */
