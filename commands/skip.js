@@ -49,7 +49,7 @@ try {
     .setColor('#3498db')
     .setAuthor({
       name: 'Song Skipped',
-      iconURL: 'https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdzVkNmJzdXRyanQ2dTNzNGVvYnZkNHc5eGh0cTB2aTFlMjB1YzJ5MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/yFKokXsr5Bc6xVqpTt/giphy.gif',
+      iconURL: 'https://d.top4top.io/p_3002xlfu61.gif',
       url: 'https://discord.gg/FUEHs7RCqz'
     })
     .setDescription(success ? ` **SKIPPED** : **${old.name}**` : '❌ Queue is empty!')
