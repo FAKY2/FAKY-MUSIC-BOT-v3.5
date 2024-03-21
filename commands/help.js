@@ -34,9 +34,11 @@ module.exports = {
           { name: '⏩ Seek', value: 'Seek to a specific time in the current song' },
           { name: '⏮️ Previous', value: 'Play the previous song in the queue' },
           { name: '🔀 Shuffle', value: 'Shuffle the songs in queue' },
-          { name: '✈️ leave', value: 'not available yet' },
-          { name: '💤 ', value: 'not available yet' },
-          { name: 'Owner', value: 'FAKY' },
+          { name: '🎧 playlist create', value: 'you can create multiple playlist ' },
+          { name: '➕ playlist add-music', value: 'add music to your playlist ' },
+          { name: '📋 playlist lists', value: 'see all your playlists ' },
+          { name: '🗑️ playlist delete', value: 'to delete your playlist' },
+          
         )
         .setImage(`https://cdn.discordapp.com/attachments/1004341381784944703/1165201249331855380/RainbowLine.gif?ex=654f37ba&is=653cc2ba&hm=648a2e070fab36155f4171962e9c3bcef94857aca3987a181634837231500177&`); 
 
@@ -49,23 +51,18 @@ module.exports = {
           { name: '🗑️ Clear', value: 'Clear the song queue of this server' },
           { name: '⏱️ Time', value: 'Display the current song playback time' },
           { name: '🎧 Filter', value: 'Apply filters to enhance the sound as you love' },
-           { name: '🎵 Now Playing', value: 'Display the currently playing song information' },
+          { name: '🎵 Now Playing', value: 'Display the currently playing song information' },
           { name: '🔊 Volume', value: 'Adjust the music volume [ hearing at high volumes is risky ]' },
           { name: 'Owner', value: 'FAKY' },
         ) 
        .setImage(`https://cdn.discordapp.com/attachments/1004341381784944703/1165201249331855380/RainbowLine.gif?ex=654f37ba&is=653cc2ba&hm=648a2e070fab36155f4171962e9c3bcef94857aca3987a181634837231500177&`)
-      const button1 = new ButtonBuilder()
-        .setLabel('instagram')
-        .setURL('https://www.instagram.com/mahmoud.elfakii/')
-        .setStyle(ButtonStyle.Link);
-
-      const button2 = new ButtonBuilder()
+       const button1 = new ButtonBuilder()
         .setLabel('invite')
         .setURL('https://discord.com/api/oauth2/authorize?client_id=1078131662669488218&permissions=49468933668176&scope=applications.commands%20bot')
         .setStyle(ButtonStyle.Link);
 
       const row = new ActionRowBuilder()
-        .addComponents(button1, button2,);
+        .addComponents(button1);
 
       interaction.reply({
         embeds: [musicCommandsEmbed, basicCommandsEmbed],
