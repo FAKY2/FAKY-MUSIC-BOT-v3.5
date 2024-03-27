@@ -8,7 +8,7 @@ module.exports = {
   commandsDir: './commands',
   language: "en",
   embedColor: "00fbff",
-  errorLog: "",
+  errorLog: "1212067144775508018",
 
 
   sponsor: {
@@ -38,11 +38,11 @@ module.exports = {
     },
 
     voiceConfig: {
-      leaveOnFinish: true,
+      leaveOnFinish: false,
       leaveOnStop: true,
       leaveOnEmpty: {
         status: true,
-        cooldown: 1,
+        cooldown: 5,
       },
 
     },
