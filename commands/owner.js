@@ -15,7 +15,7 @@ module.exports = {
     try {
       const youtubeLink = 'https://discord.gg/FUEHs7RCqz0202254889';
       const InstagramLink = 'https://www.instagram.com/mahmoud.elfakii/';
-      const invitelink = 'https://discord.com/api/oauth2/authorize?client_id=1078131662669488218&permissions=49468933668176&scope=applications.commands%20bot';
+      const invitelink = 'https://discord.com/oauth2/authorize?client_id=1213700667374571620&permissions=35878012935248&scope=bot';
       const { EmbedBuilder } = require('discord.js')
         const embed = new EmbedBuilder()
             .setColor('#da2a41')
