@@ -55,14 +55,14 @@ module.exports = {
 
             if (playlist_owner_filter !== interaction.member.id) {
               if (playlist_public_filter === false) {
-                return interaction.reply({ content: `❌`, ephemeral: true }).catch(e => { })
+                return interaction.reply({ content: ✅ ephemeral: true }).catch(e => { })
               }
             }
 
             const music_filter = playlist[i]?.musics?.filter(m => m.playlist_name === playlistw)
-            if (!music_filter?.length > 0) return interaction.reply({ content: `❌`, ephemeral: true }).catch(e => { })
+            if (!music_filter?.length > 0) return interaction.reply({ content: `✅`, ephemeral: true }).catch(e => { })
 
-            interaction.reply({ content: `❌` }).catch(e => { })
+            interaction.reply({ content: `✅` }).catch(e => { })
 
             let songs = []
             music_filter.map(m => songs.push(m.music_url))
@@ -74,7 +74,7 @@ module.exports = {
                 parallel: true
               });
 
-              await interaction.editReply({ content: `❌`.replace("{interaction.member.id}", interaction.member.id).replace("{music_filter.length}", music_filter.length) }).catch(e => { })
+              await interaction.editReply({ content: `✅`.replace("{interaction.member.id}", interaction.member.id).replace("{music_filter.length}", music_filter.length) }).catch(e => { })
 
               try {
                 await client.player.play(interaction.member.voice.channel, playl, {
@@ -112,7 +112,7 @@ module.exports = {
           } else {
             arr++
             if (arr === playlist.length) {
-              return interaction.reply({ content: `❌`, ephemeral: true }).catch(e => { })
+              return interaction.reply({ content: `✅`, ephemeral: true }).catch(e => { })
             }
           }
         }
