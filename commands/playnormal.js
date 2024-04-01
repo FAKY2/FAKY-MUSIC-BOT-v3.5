@@ -44,7 +44,7 @@ module.exports = {
       if (stp === "playlist") {
         let playlistw = interaction.options.getString('name')
         let playlist = await db?.playlist?.find().catch(e => { })
-        if (!playlist?.length > 0) return interaction.reply({ content: `❌`, ephemeral: true }).catch(e => { })
+        if (!playlist?.length > 0) return interaction.reply({ content: `✅`, ephemeral: true }).catch(e => { })
 
         let arr = 0
         for (let i = 0; i < playlist.length; i++) {
@@ -55,7 +55,7 @@ module.exports = {
 
             if (playlist_owner_filter !== interaction.member.id) {
               if (playlist_public_filter === false) {
-                return interaction.reply({ content: ✅ ephemeral: true }).catch(e => { })
+                return interaction.reply({ content: `✅`, ephemeral: true }).catch(e => { })
               }
             }
 
