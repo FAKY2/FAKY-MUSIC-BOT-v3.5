@@ -14,7 +14,7 @@ module.exports = async (client, interaction) => {
   
 try {
 if (!interaction?.guild){
-return interaction?.reply({ content: "Rate Limited.", ephemeral: true })
+return interaction?.reply({ content: "Rate Limited...", ephemeral: true })
 } else {
 
     function cmd_loader() {
