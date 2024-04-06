@@ -53,7 +53,7 @@ module.exports = {
           { name: '🎧 Filter', value: 'Apply filters to enhance the sound as you love' },
           { name: '🎵 Now Playing', value: 'Display the currently playing song information' },
           { name: '🔊 Volume', value: 'Adjust the music volume [ hearing at high volumes is risky ]' },
-          { name: 'Owner', value: 'FAKY' },
+          {  name: 'Developer', value: 'FAKY &  Zein ' },
         ) 
        .setImage(`https://j.top4top.io/p_30189zd6n1.gif`)
        const button1 = new ButtonBuilder()
