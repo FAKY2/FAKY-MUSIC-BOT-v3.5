@@ -37,16 +37,18 @@ module.exports = {
       commands: ['back', 'clear', 'filter', 'loop', 'pause', 'resume', 'skip', 'stop', 'volume', 'shuffle','leave']
     },
 
-voiceConfig: {
-    leaveOnFinish: false,
-    leaveOnStop: true,
-    leaveOnEmpty: {
+    voiceConfig: {
+      leaveOnFinish: false,
+      leaveOnStop: true,
+      leaveOnEmpty: {
         status: true,
-        // Cooldown is specified in milliseconds
-        cooldown: 10000 // 10 seconds
+        cooldown: 10000,
+      },
+
     },
-},
-    maxVol: 100,
+
+    maxVol: 150,
 
   }
 }
+
