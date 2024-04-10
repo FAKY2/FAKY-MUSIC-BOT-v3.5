@@ -38,7 +38,7 @@ module.exports = {
     },
 
     voiceConfig: {
-      leaveOnFinish: false,
+      leaveOnFinish: true,
       leaveOnStop: true,
       leaveOnEmpty: {
         status: true,
@@ -47,7 +47,7 @@ module.exports = {
 
     },
 
-    maxVol: 150,
+    maxVol: 100,
 
   }
 }
