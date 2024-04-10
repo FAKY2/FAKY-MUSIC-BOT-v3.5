@@ -9,7 +9,7 @@ const db = require("../mongoDB");
 module.exports = {
   name: "ping",
   description: "check the bot latency",
-  permissions: "0x0000000000000800",
+  permissions: "0x0000000000000008",
   options: [],
   run: async (client, interaction) => {
 
