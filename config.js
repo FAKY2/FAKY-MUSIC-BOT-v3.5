@@ -46,5 +46,7 @@ voiceConfig: {
         cooldown: 10000 // 10 seconds
     },
 },
-maxVol: 100
+    maxVol: 100,
 
+  }
+}
