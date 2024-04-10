@@ -1,14 +1,14 @@
 module.exports = {
   TOKEN: "",
   ownerID: ["611408493274071060", ""],
-  botInvite: "",
+  botInvite: "https://discord.com/oauth2/authorize?client_id=1213700667374571620&permissions=551940029520&scope=bot",
   supportServer: "",
   mongodbURL: "mongodb+srv://youtube:youtube123@youtubedatabase.rvezx.mongodb.net/BestBot",
   status: 'BY FAKY',
   commandsDir: './commands',
   language: "en",
   embedColor: "00fbff",
-  errorLog: "1212067144775508018",
+  errorLog: "1227548790425124925",
 
 
   sponsor: {
@@ -42,7 +42,7 @@ module.exports = {
       leaveOnStop: true,
       leaveOnEmpty: {
         status: true,
-        cooldown: 5,
+        cooldown: 0.2,
       },
 
     },
