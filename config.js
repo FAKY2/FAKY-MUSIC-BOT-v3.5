@@ -37,35 +37,19 @@ module.exports = {
       commands: ['back', 'clear', 'filter', 'loop', 'pause', 'resume', 'skip', 'stop', 'volume', 'shuffle','leave']
     },
 
-       voiceConfig: {
-        leaveOnFinish: false,
-        leaveOnStop: false,
-        leaveOnEmpty: {
-            status: true,
-            cooldown: 30000, // 30 seconds cooldown
-            checkInterval: 5000, // Check every 5 seconds
-            timer: null, // Initialize timer variable
-            startTimer(channel) {
-                this.timer = setTimeout(() => {
-                    // Check if the queue is still empty after the cooldown
-                    if (isQueueEmpty) {
-                        // Leave the voice channel
-                        channel.leave();
-                    }
-                }, this.cooldown);
-            },
-            resetTimer() {
-                // Reset the timer if it's already running
-                if (this.timer) {
-                    clearTimeout(this.timer);
-                    this.timer = null;
-                }
-            }
-        },
+    voiceConfig: {
+      leaveOnFinish: false,
+      leaveOnStop: true,
+      leaveOnEmpty: {
+        status: true,
+        cooldown: 0.02,
+      },
+
     },
 
     maxVol: 100,
 
-  }  
+  }
 }
+
 
