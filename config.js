@@ -42,7 +42,7 @@ module.exports = {
       leaveOnStop: true,
       leaveOnEmpty: {
         status: true,
-        cooldown: 10,
+        cooldown: 0x0.02 ,
       },
 
     },
