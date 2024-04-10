@@ -44,7 +44,7 @@ voiceConfig: {
         status: true,
         // Cooldown is specified in milliseconds
         cooldown: 10000 // 10 seconds
-    }
+    },
 },
 maxVol: 100
 
