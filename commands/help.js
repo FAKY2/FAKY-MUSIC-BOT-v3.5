@@ -58,7 +58,7 @@ module.exports = {
        .setImage(`https://i.top4top.io/p_30259ajwt1.gif`)
        const button1 = new ButtonBuilder()
         .setLabel('invite')
-        .setURL('https://discord.com/api/oauth2/authorize?client_id=1078131662669488218&permissions=49468933668176&scope=applications.commands%20bot')
+        .setURL('https://discord.com/oauth2/authorize?client_id=1213700667374571620&permissions=6479494481&scope=bot')
         .setStyle(ButtonStyle.Link);
 
       const row = new ActionRowBuilder()
