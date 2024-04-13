@@ -49,7 +49,7 @@ try {
     .setColor('#3498db')
     .setAuthor({
       name: 'Song Skipped',
-      iconURL: 'https://d.top4top.io/p_3002xlfu61.gif',
+      iconURL: 'https://c.top4top.io/p_3025ox6di1.gif',
       url: 'https://discord.gg/FUEHs7RCqz'
     })
     .setDescription(success ? ` **SKIPPED** : **${old.name}**` : '❌ Queue is empty!')
