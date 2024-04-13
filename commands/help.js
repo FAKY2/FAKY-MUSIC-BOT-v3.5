@@ -55,7 +55,7 @@ module.exports = {
           { name: '🔊 Volume', value: 'Adjust the music volume [ hearing at high volumes is risky ]' },
           {  name: 'Developer', value: 'FAKY &  Zein ' },
         ) 
-       .setImage(`https://j.top4top.io/p_30189zd6n1.gif`)
+       .setImage(`https://j.top4top.io/p_302521i9v1.gif`)
        const button1 = new ButtonBuilder()
         .setLabel('invite')
         .setURL('https://discord.com/api/oauth2/authorize?client_id=1078131662669488218&permissions=49468933668176&scope=applications.commands%20bot')
