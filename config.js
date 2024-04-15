@@ -6,17 +6,23 @@ function isQueueEmpty() {
   return queue.length === 0;
 }
 
+// Function to leave the voice channel
+function leaveVoiceChannel() {
+  // Code to make your bot leave the voice channel
+  console.log('Bot leaving due to no songs playing.');
+}
+
 module.exports = {
   TOKEN: "",
   ownerID: ["611408493274071060", ""],
-  botInvite: "https://discord.com/oauth2/authorize?client_id=1213700667374571620&permissions=551940029520&scope=bot",
-  supportServer: "",
+  botInvite: "https://discord.com/oauth2/authorize?client_id=855807016064647179&permissions=8&scope=bot",
+  supportServer: "https://discord.gg/abu8wdtq",
   mongodbURL: "mongodb+srv://youtube:youtube123@youtubedatabase.rvezx.mongodb.net/BestBot",
   status: 'BY FAKY',
   commandsDir: './commands',
   language: "en",
   embedColor: "00fbff",
-  errorLog: "1227548790425124925",
+  errorLog: "1226158618219643021",
 
   sponsor: {
     status: true,
@@ -45,16 +51,12 @@ module.exports = {
     },
 
     voiceConfig: {
-      leaveOnFinish: false,
       leaveOnStop: true,
       leaveOnEmpty: {
         status: true,
         timeout: 30, // Timeout in seconds
         onEmptyCheck: isQueueEmpty, // Function to check if the queue is empty
-        onLeave: () => {
-          // Code to make your bot leave the voice channel
-          console.log('Bot leaving due to no songs playing.');
-        }
+        onLeave: leaveVoiceChannel // Function to execute when leaving
       }
     }
   }
