@@ -1,17 +1,3 @@
-// Assuming you have a queue object that contains your playlist or song queue
-let isPlaying = false; // Variable to track if the bot is playing any songs
-
-// Function to check if the queue is empty
-function isQueueEmpty() {
-  return queue.length === 0;
-}
-
-// Function to leave the voice channel
-function leaveVoiceChannel() {
-  // Code to make your bot leave the voice channel
-  console.log('Bot leaving due to no songs playing.');
-}
-
 module.exports = {
   TOKEN: "",
   ownerID: ["611408493274071060", ""],
@@ -23,6 +9,7 @@ module.exports = {
   language: "en",
   embedColor: "00fbff",
   errorLog: "1226158618219643021",
+
 
   sponsor: {
     status: true,
@@ -51,13 +38,16 @@ module.exports = {
     },
 
     voiceConfig: {
+      leaveOnFinish: false,
       leaveOnStop: true,
       leaveOnEmpty: {
         status: true,
-        timeout: 30, // Timeout in seconds
-        onEmptyCheck: isQueueEmpty, // Function to check if the queue is empty
-        onLeave: leaveVoiceChannel // Function to execute when leaving
-      }
-    }
-  }
-};
+        cooldown: 0,
+      },
+
+    },
+
+    maxVol: 50,
+
+  }  
+}
