@@ -1,3 +1,11 @@
+// Assuming you have a queue object that contains your playlist or song queue
+let isPlaying = false; // Variable to track if the bot is playing any songs
+
+// Function to check if the queue is empty
+function isQueueEmpty() {
+  return queue.length === 0;
+}
+
 module.exports = {
   TOKEN: "",
   ownerID: ["611408493274071060", ""],
@@ -10,7 +18,6 @@ module.exports = {
   embedColor: "00fbff",
   errorLog: "1227548790425124925",
 
-
   sponsor: {
     status: true,
     url: "https://www.youtube.com",
@@ -19,7 +26,7 @@ module.exports = {
   voteManager: {
     status: false,
     api_key: "",
-    vote_commands: ["back", "channel", "clear", "dj", "filter", "loop", "nowplaying", "pause", "playnormal", "playlist", "queue", "resume", "save", "play", "skip", "stop", "time", "volume", "leave"],
+    vote_commands: ["back", "channel", "clear", "dj", "filter", "loop", "nowplaying", "pause", "playnormal", "playlist", "queue", "resume", "save", "play", "skip", "stop", "time", "volume", "leave", "setupmusic"],
     vote_url: "",
   },
 
@@ -38,22 +45,17 @@ module.exports = {
     },
 
     voiceConfig: {
-
-      leaveOnFinish: {
-        status: true,
-        cooldown: 0,
-      },
-
+      leaveOnFinish: true,
       leaveOnStop: true,
       leaveOnEmpty: {
         status: true,
-        cooldown: 0,
-      },
-
-    },
-
-    maxVol: 100,
-
+        timeout: 30, // Timeout in seconds
+        onEmptyCheck: isQueueEmpty, // Function to check if the queue is empty
+        onLeave: () => {
+          // Code to make your bot leave the voice channel
+          console.log('Bot leaving due to no songs playing.');
+        }
+      }
+    }
   }
-}
-
+};
