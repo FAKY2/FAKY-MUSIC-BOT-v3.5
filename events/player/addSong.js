@@ -8,8 +8,8 @@ module.exports = async (client, queue, song) => {
       const embed = new EmbedBuilder()
         .setAuthor({
         name: 'Added To Queue',
-        iconURL: 'https://d.top4top.io/p_3002xlfu61.gif',
-        iconURL: 'https://d.top4top.io/p_3002xlfu61.gif', 
+        iconURL: 'https://c.top4top.io/p_3025ox6di1.gif',
+        iconURL: 'https://c.top4top.io/p_3025ox6di1.gif', 
         url: 'https://discord.gg/FUEHs7RCqz'
     })
         .setDescription(`<@${song.user.id}>, **${song.name}**`)
