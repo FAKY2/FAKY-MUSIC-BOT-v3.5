@@ -20,7 +20,7 @@ module.exports = async (client) => {
 
         console.log('\x1b[32m%s\x1b[0m', `|    🌼 Logged in as ${client.user.username}`);
 
-        const statusMessages = ['/help', '/help'];
+        const statusMessages = ['', 'bye word'];
         let statusIndex = 0;
 
         setInterval(() => {
