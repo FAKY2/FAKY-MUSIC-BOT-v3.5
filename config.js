@@ -8,7 +8,7 @@ module.exports = {
   commandsDir: './commands',
   language: "en",
   embedColor: "00fbff",
-  errorLog: "1226158618219643021",
+  errorLog: "1242734378250141716",
 
 
   sponsor: {
